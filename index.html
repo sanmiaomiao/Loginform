@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>login插件</title>		
+		<script src="login.js"></script>
+		<link href="login.css" rel="stylesheet" />
+		<style type="text/css">
+			#box{
+				height: 100vh;
+				width: 100vw;
+			}
+			body{
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+	</body>
+	<script>
+		var submitcallback=function (a){//提交表单回调函数
+			console.log(a);
+			console.log('正在发送ajax请求')
+		};
+		var remembercallback=function(a){//记住密码回调函数
+			console.log(a);
+			alert('记住了密码')
+		}
+		var forgetpwdUrl='http://www.baidu.com';//忘记密码跳转地址
+		var registerUrl="http://www.jd.com";//注册跳转地址
+		var data={};
+		var color='pink';//主体颜色,默认为darkcyan
+		new login({
+			el:'#box',
+			data:{
+				forgetpwdUrl:forgetpwdUrl,
+				registerUrl:registerUrl,
+				color:color,
+			},
+			callback:{
+				submitcallback:submitcallback,
+				remembercallback:remembercallback
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,41 @@
+
+.inputInfo{
+	width: 100%;
+	
+}
+.inputInfo:focus{
+	border-color: #FF0000;
+	
+}
+.username{	
+	padding: 3px;
+	border-radius: 0.25rem;
+}
+.username input:focus{
+	outline: none;
+}
+.password{	
+	padding: 3px;
+	border-radius: 0.25rem;
+}
+.password input:focus{
+	outline: none;
+}
+.Re-For{
+	display: flex;
+	justify-content: space-between;
+	 margin: 5px;
+}
+.register{
+	margin: 5px;
+}
+.warnInfo{
+	 padding: 3px;
+}
+.logbutton{
+	text-align: center;
+	width: 100%;
+	border-radius: 0.25rem;
+	font-size: 15px;
+	padding: 5px;
+}
